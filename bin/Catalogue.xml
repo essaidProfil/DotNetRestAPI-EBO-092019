@@ -481,5 +481,93 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:Catalogue.Controllers.ProductController">
+            <summary>
+            Produits
+            </summary>
+        </member>
+        <member name="M:Catalogue.Controllers.ProductController.GetAllProducts">
+            <summary>
+            Get All Available Products
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Catalogue.Controllers.ProductController.GetProduct(System.String)">
+            <summary>
+            Get Product details by id
+            </summary>
+            <param name="pid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Catalogue.WebApiApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Catalogue.WebApiApplication.Application_Start">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Catalogue.Models.Context">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Catalogue.Models.Context.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Context.Products">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Catalogue.Models.Product">
+            <summary>
+            Product Model
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Product.Id">
+            <summary>
+            Product id
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Product.PId">
+            <summary>
+            PId
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Product.Name">
+            <summary>
+            Product Name
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Product.ProductCategory">
+            <summary>
+            Product Category
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Product.Description">
+            <summary>
+            Product Description
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Product.ProductPrice">
+            <summary>
+            Product Price
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Product.InStock">
+            <summary>
+            Product Availability
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Product.PromotionId">
+            <summary>
+            Product Promotion
+            </summary>
+        </member>
     </members>
 </doc>
