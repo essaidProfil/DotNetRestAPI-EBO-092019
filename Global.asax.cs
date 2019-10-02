@@ -25,7 +25,8 @@ namespace Catalogue
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            CosmosDbStorage<Catalogue.Models.Product>.Initialize();
+            CosmosDbStorage<Models.Product>.Initialize();
+            CosmosDbStorage<Models.Order>.Initialize();
         }
     }
 }

@@ -4,6 +4,17 @@
         <name>Catalogue</name>
     </assembly>
     <members>
+        <member name="T:Catalogue.BundleConfig">
+            <summary>
+            BundleConfig
+            </summary>
+        </member>
+        <member name="M:Catalogue.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)">
+            <summary>
+            
+            </summary>
+            <param name="bundles"></param>
+        </member>
         <member name="M:Catalogue.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
             <summary>
             Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
@@ -499,6 +510,86 @@
             <param name="pid"></param>
             <returns></returns>
         </member>
+        <member name="T:Catalogue.CosmosDbStorage`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Catalogue.CosmosDbStorage`1.GetItemAsync(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="category"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Catalogue.CosmosDbStorage`1.GetItemsAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Catalogue.CosmosDbStorage`1.CreateItemAsync(`0)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Catalogue.CosmosDbStorage`1.UpdateItemAsync(System.String,`0)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Catalogue.CosmosDbStorage`1.DeleteItemAsync(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="category"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Catalogue.CosmosDbStorage`1.Initialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Catalogue.CosmosDbStorage`1.Initialize(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="endpoint"></param>
+            <param name="authKey"></param>
+        </member>
+        <member name="M:Catalogue.CosmosDbStorage`1.Teardown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Catalogue.CosmosDbStorage`1.CreateDatabaseIfNotExistsAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Catalogue.CosmosDbStorage`1.CreateCollectionIfNotExistsAsync(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="partitionkey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Catalogue.CosmosDbStorage`1.DeleteDatabaseAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Catalogue.WebApiApplication">
             <summary>
             
@@ -521,7 +612,57 @@
         </member>
         <member name="P:Catalogue.Models.Context.Products">
             <summary>
-            
+            Products Collection
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Context.Orders">
+            <summary>
+            Orders Collection
+            </summary>
+        </member>
+        <member name="T:Catalogue.Models.Order">
+            <summary>
+            Order Model
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Order.Id">
+            <summary>
+            Item id
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Order.IDOrder">
+            <summary>
+            Order id
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Order.ProductId">
+            <summary>
+            Product ordered id
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Order.Quantity">
+            <summary>
+            Order Quantity
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Order.UserID">
+            <summary>
+            Custumer ID - Client
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Order.DateOrder">
+            <summary>
+            Order date
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Order.Status">
+            <summary>
+            Order Status : Pending, Completed, Canceled...etc
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Order.TotalPrice">
+            <summary>
+            Total price
             </summary>
         </member>
         <member name="T:Catalogue.Models.Product">
