@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -10,26 +12,21 @@ using Newtonsoft.Json;
 namespace Catalogue.Controllers
 {
     /// <summary>
-    /// Produits
+    /// 
     /// </summary>
-    public class ProductController : ApiController
+    public class OrderController : ApiController
     {
         /// <summary>
-        /// Product Collection
-        /// </summary>
-        private const string CollectionId = "Products";
-      
-        /// <summary>
-        /// Get All Available Products
+        /// Get all orders
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [ActionName("GetAllProducts")]
-        public async Task<HttpResponseMessage> GetAllProducts()
+        [ActionName("GetOrders")]
+        public async Task<HttpResponseMessage> GetOrders()
         {
             try
             {
-                var result = await CosmosDbStorage<Product>.GetItemsAsync(p => p.InStock);
+                var result = await CosmosDbStorage<Order>.GetItemsAsync(o => o.UserID != null); ;
                 return new HttpResponseMessage
                 {
                     StatusCode = HttpStatusCode.Found,
@@ -41,24 +38,24 @@ namespace Catalogue.Controllers
                 throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message));
             }
         }
-
         /// <summary>
-        /// Get Product details by id
+        /// Place Order
         /// </summary>
-        /// <param name="pid"></param>
+        /// <param name="Order"></param>
         /// <returns></returns>
         [HttpPost]
-        [ActionName("GetProduct/{pid}")]
-        public async Task<HttpResponseMessage> GetProduct(string pid)
+        [ActionName("AddOrder")]
+        public async Task<HttpResponseMessage> AddOrder([System.Web.Mvc.Bind(Include = "IDOrder,ProductId,Quantity,UserID,DateOrder,Status,TotalPrice")] Order Order)
         {
             try
             {
-                var result = await CosmosDbStorage<Product>.GetItemsAsync(d => d.PId == pid);
-                return new HttpResponseMessage
+                if (ModelState.IsValid)
                 {
-                    StatusCode = HttpStatusCode.Found,
-                    Content = new StringContent(JsonConvert.SerializeObject(result), Encoding.UTF8, "application/json")
-                };
+                    var result = await CosmosDbStorage<Order>.CreateItemAsync(Order);
+
+                    return new HttpResponseMessage(HttpStatusCode.Created);
+                }
+                return new HttpResponseMessage(HttpStatusCode.BadRequest);
             }
             catch (Exception ex)
             {

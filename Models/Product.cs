@@ -32,7 +32,7 @@ namespace Catalogue.Models
         /// <summary>
         /// Product Category
         /// </summary>
-        [JsonProperty(PropertyName = "categorie")]
+        [JsonProperty(PropertyName = "category")]
         public string ProductCategory { get; set; }
 
         /// <summary>

@@ -492,9 +492,32 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:Catalogue.Controllers.OrderController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Catalogue.Controllers.OrderController.GetOrders">
+            <summary>
+            Get all orders
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Catalogue.Controllers.OrderController.AddOrder(Catalogue.Models.Order)">
+            <summary>
+            Place Order
+            </summary>
+            <param name="Order"></param>
+            <returns></returns>
+        </member>
         <member name="T:Catalogue.Controllers.ProductController">
             <summary>
             Produits
+            </summary>
+        </member>
+        <member name="F:Catalogue.Controllers.ProductController.CollectionId">
+            <summary>
+            Product Collection
             </summary>
         </member>
         <member name="M:Catalogue.Controllers.ProductController.GetAllProducts">
