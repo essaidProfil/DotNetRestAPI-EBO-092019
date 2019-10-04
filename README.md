@@ -15,5 +15,3 @@ Cette API permet les operations suivantes :</br>
     < add key="endpoint" value="https://VOTRE-AZURE-HOST.documents.azure.com:443/" /></br>
     < add key="authKey" value="VOTRE-AZURE-AUTHKEY==" /></br>
     < add key="database" value="NOM-DE-VOTRE-DB" /></br>
-
-<h2> Captures d'écran des tests sur Postman </h2>
