@@ -17,4 +17,13 @@ Cette API permet les operations suivantes :</br>
     < add key="database" value="NOM-DE-VOTRE-DB" /></br>
     
 # Captures d'écran des résultats sur Postman:
+
+<b>1- Affichage d'une liste de produits</b> 
+
 ![Alt text](http://ebo.itfingers.net/img/ListeDesProduits.png?raw=true "Résultats liste des produits")
+
+
+<b>2- Affichage des détails d'un produit par ID</b> 
+
+![Alt text](http://ebo.itfingers.net/img/ProductById.png?raw=true "Affichage du produit par Id")
+
