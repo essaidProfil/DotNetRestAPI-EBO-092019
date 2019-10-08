@@ -648,46 +648,6 @@
             Order Model
             </summary>
         </member>
-        <member name="P:Catalogue.Models.Order.Id">
-            <summary>
-            Item id
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Order.IDOrder">
-            <summary>
-            Order id
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Order.ProductId">
-            <summary>
-            Product ordered id
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Order.Quantity">
-            <summary>
-            Order Quantity
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Order.UserID">
-            <summary>
-            Custumer ID - Client
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Order.DateOrder">
-            <summary>
-            Order date
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Order.Status">
-            <summary>
-            Order Status : Pending, Completed, Canceled...etc
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Order.TotalPrice">
-            <summary>
-            Total price
-            </summary>
-        </member>
         <member name="T:Catalogue.Models.Product">
             <summary>
             Product Model

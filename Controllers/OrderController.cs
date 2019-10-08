@@ -26,7 +26,7 @@ namespace Catalogue.Controllers
         {
             try
             {
-                var result = await CosmosDbStorage<Order>.GetItemsAsync(o => o.UserID != null); ;
+                var result = await CosmosDbStorage<Order>.GetItemsAsync(o => o.Username != null); ;
                 return new HttpResponseMessage
                 {
                     StatusCode = HttpStatusCode.Found,
