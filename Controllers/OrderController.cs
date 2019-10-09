@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -68,8 +66,8 @@ namespace Catalogue.Controllers
         /// Get all orders
         /// </summary>
         /// <returns></returns>
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.ActionName("GetOrders")]
+        [HttpGet]
+        [ActionName("GetOrders")]
         public async Task<HttpResponseMessage> GetOrders()
         {
             try

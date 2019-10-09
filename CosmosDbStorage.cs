@@ -55,6 +55,15 @@ namespace Catalogue
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static async Task DeleteAsync(string id)
+        {
+            await client.DeleteDocumentAsync(UriFactory.CreateDocumentUri(DatabaseId, CollectionId, id), new RequestOptions { PartitionKey = new PartitionKey(Undefined.Value) });
+        }
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="predicate"></param>
         /// <returns></returns>
         public static async Task<IEnumerable<T>> GetItemsAsync(Expression<Func<T, bool>> predicate)
