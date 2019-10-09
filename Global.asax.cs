@@ -6,7 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-
+using Catalogue.Models;
 namespace Catalogue
 {
     /// <summary>
@@ -25,8 +25,8 @@ namespace Catalogue
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            CosmosDbStorage<Models.Product>.Initialize();
-            CosmosDbStorage<Models.Order>.Initialize();
+            CosmosDbStorage<Product>.Initialize("Products");
+            CosmosDbStorage<Order>.Initialize("Orders");
         }
     }
 }

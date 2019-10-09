@@ -530,7 +530,7 @@
             <summary>
             Get Product details by id
             </summary>
-            <param name="pid"></param>
+            <param name="id"></param>
             <returns></returns>
         </member>
         <member name="T:Catalogue.CosmosDbStorage`1">
@@ -538,6 +538,11 @@
             
             </summary>
             <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Catalogue.CosmosDbStorage`1.CollectionId">
+            <summary>
+            
+            </summary>
         </member>
         <member name="M:Catalogue.CosmosDbStorage`1.GetItemAsync(System.String,System.String)">
             <summary>
@@ -577,7 +582,7 @@
             <param name="category"></param>
             <returns></returns>
         </member>
-        <member name="M:Catalogue.CosmosDbStorage`1.Initialize">
+        <member name="M:Catalogue.CosmosDbStorage`1.Initialize(System.String)">
             <summary>
             
             </summary>
@@ -623,6 +628,31 @@
             
             </summary>
         </member>
+        <member name="T:Catalogue.Models.Category">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Category.CategoryID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Category.CategoryName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Category.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Category.Products">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Catalogue.Models.Context">
             <summary>
             
@@ -648,6 +678,41 @@
             Order Model
             </summary>
         </member>
+        <member name="P:Catalogue.Models.Order.Id">
+            <summary>
+            Item id
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Order.ProductId">
+            <summary>
+            Product ordered id
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Order.Quantity">
+            <summary>
+            Order Quantity
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Order.UserID">
+            <summary>
+            Custumer ID - Client
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Order.DateOrder">
+            <summary>
+            Order date
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Order.Status">
+            <summary>
+            Order Status : Pending, Completed, Canceled...etc
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Order.TotalPrice">
+            <summary>
+            Total price
+            </summary>
+        </member>
         <member name="T:Catalogue.Models.Product">
             <summary>
             Product Model
@@ -656,11 +721,6 @@
         <member name="P:Catalogue.Models.Product.Id">
             <summary>
             Product id
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Product.PId">
-            <summary>
-            PId
             </summary>
         </member>
         <member name="P:Catalogue.Models.Product.Name">

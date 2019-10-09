@@ -18,12 +18,6 @@ namespace Catalogue.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// PId
-        /// </summary>
-        [JsonProperty(PropertyName = "pid")]
-        public string PId { get; set; }
-
-        /// <summary>
         /// Product Name
         /// </summary>
         [JsonProperty(PropertyName = "name")]

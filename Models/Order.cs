@@ -16,13 +16,7 @@ namespace Catalogue.Models
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-
-        /// <summary>
-        /// Order id
-        /// </summary>
-        [JsonProperty(PropertyName = "oid")]
-        public string IDOrder { get; set; }
-
+        
         /// <summary>
         /// Product ordered id
         /// </summary>
@@ -57,6 +51,6 @@ namespace Catalogue.Models
         /// Total price
         /// </summary>
         [JsonProperty(PropertyName = "ttlprice")]
-        public string TotalPrice { get; set; }
+        public double TotalPrice { get; set; }
     }
 }

@@ -45,15 +45,15 @@ namespace Catalogue.Controllers
         /// <summary>
         /// Get Product details by id
         /// </summary>
-        /// <param name="pid"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         [HttpPost]
-        [ActionName("GetProduct/{pid}")]
-        public async Task<HttpResponseMessage> GetProduct(string pid)
+        [ActionName("GetProduct/{id}")]
+        public async Task<HttpResponseMessage> GetProduct(string id)
         {
             try
             {
-                var result = await CosmosDbStorage<Product>.GetItemsAsync(d => d.PId == pid);
+                var result = await CosmosDbStorage<Product>.GetItemsAsync(d => d.Id == id);
                 return new HttpResponseMessage
                 {
                     StatusCode = HttpStatusCode.Found,

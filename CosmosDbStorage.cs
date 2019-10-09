@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using Microsoft.Azure.Documents;
 using Microsoft.Azure.Documents.Client;
 using Microsoft.Azure.Documents.Linq;
-using System.Web;
 
 namespace Catalogue
 {
@@ -18,8 +17,15 @@ namespace Catalogue
     public static class CosmosDbStorage<T> where T : class
     {
         private static readonly string DatabaseId = ConfigurationManager.AppSettings["database"];
-        private static readonly string CollectionId = ConfigurationManager.AppSettings["collection"];
+        //private static readonly string CollectionId = ConfigurationManager.AppSettings["collection"];
         private static DocumentClient client;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static string CollectionId { get; set; }
+
+
         /// <summary>
         /// 
         /// </summary>
@@ -99,8 +105,9 @@ namespace Catalogue
         /// <summary>
         /// 
         /// </summary>
-        public static void Initialize()
+        public static void Initialize(string collectionId)
         {
+            CollectionId = collectionId;
             client = new DocumentClient(new Uri(ConfigurationManager.AppSettings["endpoint"]), ConfigurationManager.AppSettings["authKey"]);
             CreateDatabaseIfNotExistsAsync().Wait();
             CreateCollectionIfNotExistsAsync("/category").Wait();
