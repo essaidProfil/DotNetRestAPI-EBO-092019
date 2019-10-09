@@ -6,9 +6,9 @@
 Cette API permet les operations suivantes :</br>
 • Affichage d'une liste de produits.</br>
 • Affichage des détails d'un produit par ID,</br>
-• TODO : Ajouter un produit au panier,</br>
-• TODO : Enlever un produit du panier,</br>
-• TODO : Afficher le contenu du panier.</br>
+• TODO-FIXME : Ajouter un produit au panier,</br>
+• Enlever un produit du panier,</br>
+• Afficher le contenu du panier.</br>
 • Nous utilisons une base de données NoSql <b>AZURE CosmosDB</b> pour le stockage et la recupération des données.</br>
 
 <b>NB :</b> Vous devez indiquer les informations suivantes dans votre fichier <b>web.config</b> pour pouvoir connecter votre API à la Base AZURE CosmosDB:</br>
