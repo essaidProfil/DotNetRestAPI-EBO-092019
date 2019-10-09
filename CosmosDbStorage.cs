@@ -92,6 +92,19 @@ namespace Catalogue
         {
             return await client.ReplaceDocumentAsync(UriFactory.CreateDocumentUri(DatabaseId, CollectionId, id), item);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static async Task DeleteAsync(string id)
+        {
+            await client.DeleteDocumentAsync(
+          UriFactory.CreateDocumentUri(DatabaseId, CollectionId, id), 
+          new RequestOptions() { PartitionKey = new PartitionKey(Undefined.Value) });
+        }
+
         /// <summary>
         /// 
         /// </summary>
