@@ -34,3 +34,8 @@ Cette API permet les operations suivantes :</br>
 <b>4- Enlever un produit du panier</b> 
 
 ![Alt text](http://ebo.itfingers.net/img/RemoveOrder.png?raw=true "Enlever un produit du panier")
+
+
+<b>4- Afficher le contenu du panier</b> 
+
+![Alt text](http://ebo.itfingers.net/img/DisplayOrders.png?raw=true "Afficher le contenu du panier")
