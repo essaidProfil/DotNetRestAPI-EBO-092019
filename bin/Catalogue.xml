@@ -540,6 +540,31 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:Catalogue.Controllers.PromotionController">
+            <summary>
+            Promotion controller
+            </summary>
+        </member>
+        <member name="M:Catalogue.Controllers.PromotionController.GetPromotions">
+            <summary>
+            Get all active promotion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Catalogue.Controllers.PromotionController.AddPromotion(Catalogue.Models.Promotion)">
+            <summary>
+            Ajouter des promotions
+            </summary>
+            <param name="promo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Catalogue.Controllers.PromotionController.UpdatePromotion(Catalogue.Models.Promotion)">
+            <summary>
+            Update Promotions
+            </summary>
+            <param name="promo"></param>
+            <returns></returns>
+        </member>
         <member name="T:Catalogue.CosmosDbStorage`1">
             <summary>
             
@@ -642,31 +667,6 @@
             
             </summary>
         </member>
-        <member name="T:Catalogue.Models.Category">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Category.CategoryID">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Category.CategoryName">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Category.Description">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Category.Products">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="T:Catalogue.Models.Context">
             <summary>
             
@@ -687,6 +687,11 @@
             Orders Collection
             </summary>
         </member>
+        <member name="P:Catalogue.Models.Context.Promotions">
+            <summary>
+            Promotions Collection
+            </summary>
+        </member>
         <member name="T:Catalogue.Models.Order">
             <summary>
             Order Model
@@ -702,6 +707,11 @@
             Product ordered id
             </summary>
         </member>
+        <member name="P:Catalogue.Models.Order.UnitPrice">
+            <summary>
+            Unit price
+            </summary>
+        </member>
         <member name="P:Catalogue.Models.Order.Quantity">
             <summary>
             Order Quantity
@@ -712,14 +722,41 @@
             Order date
             </summary>
         </member>
+        <member name="P:Catalogue.Models.Order.StartPromo">
+            <summary>
+            Start promo from Promotions
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Order.EndPromo">
+            <summary>
+            End promo from Promotions
+            </summary>
+        </member>
         <member name="P:Catalogue.Models.Order.Status">
             <summary>
             Order Status : Pending, Completed, Canceled...etc
             </summary>
         </member>
-        <member name="P:Catalogue.Models.Order.TotalPrice">
+        <member name="P:Catalogue.Models.Order.IsPromo">
+            <summary>
+            If is Promo from Products
+            </summary>
+        </member>
+        <member name="M:Catalogue.Models.Order.TotalPrice">
             <summary>
             Total price
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="P:Catalogue.Models.Order.Promotion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Order.Product">
+            <summary>
+            Products
             </summary>
         </member>
         <member name="T:Catalogue.Models.Product">
@@ -757,9 +794,59 @@
             Product Availability
             </summary>
         </member>
-        <member name="P:Catalogue.Models.Product.PromotionId">
+        <member name="P:Catalogue.Models.Product.IsPromo">
             <summary>
             Product Promotion
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Product.StartPromo">
+            <summary>
+            Start promo date If is promo
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Product.EndPromo">
+            <summary>
+            End promo date
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Product.Promotion">
+            <summary>
+            Promotion
+            </summary>
+        </member>
+        <member name="T:Catalogue.Models.Promotion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Promotion.PromotionId">
+            <summary>
+            Promotion Id
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Promotion.PromotionName">
+            <summary>
+            Promotion Name
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Promotion.StartPromo">
+            <summary>
+            Promotion start date | First promotion type | Limited by date
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Promotion.EndPromo">
+            <summary>
+            Promotion End date
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Promotion.CodePromo">
+            <summary>
+            2nd promo | By promo code
+            </summary>
+        </member>
+        <member name="P:Catalogue.Models.Promotion.PromoEnabled">
+            <summary>
+            Promo status
             </summary>
         </member>
     </members>

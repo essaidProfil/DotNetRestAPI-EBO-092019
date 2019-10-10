@@ -50,7 +50,23 @@ namespace Catalogue.Models
         /// <summary>
         /// Product Promotion
         /// </summary>
-        [JsonProperty(PropertyName = "promotionid")]
-        public string PromotionId { get; set; }
+        [JsonProperty(PropertyName = "ispromo")]
+        public bool IsPromo { get; set; }
+
+        /// <summary>
+        /// Start promo date If is promo
+        /// </summary>
+        public string StartPromo { get; set; }
+
+        /// <summary>
+        /// End promo date
+        /// </summary>
+        public string EndPromo { get; set; }
+
+        /// <summary>
+        /// Promotion
+        /// </summary>
+        public virtual ICollection<Promotion> Promotion { get; set; }
+
     }
 }

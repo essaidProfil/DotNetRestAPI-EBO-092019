@@ -7,7 +7,7 @@ using System.Web;
 namespace Catalogue.Models
 {
     /// <summary>
-    /// First promotion type
+    /// 
     /// </summary>
     public class Promotion
     {
@@ -15,7 +15,7 @@ namespace Catalogue.Models
         /// Promotion Id
         /// </summary>
         [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
+        public string PromotionId { get; set; }
         /// <summary>
         /// Promotion Name
         /// </summary>
@@ -23,7 +23,7 @@ namespace Catalogue.Models
         public string PromotionName { get; set; }
 
         /// <summary>
-        /// Promotion start date 
+        /// Promotion start date | First promotion type | Limited by date
         /// </summary>
         [JsonProperty(PropertyName = "start_date")]
         public string StartPromo { get; set; }
@@ -34,7 +34,17 @@ namespace Catalogue.Models
         [JsonProperty(PropertyName = "end_date")]
         public string EndPromo { get; set; }
 
+        /// <summary>
+        /// 2nd promo | By promo code
+        /// </summary>
+        [JsonProperty(PropertyName = "code_promo")]
+        public string CodePromo { get; set; }
 
+        /// <summary>
+        /// Promo status
+        /// </summary>
+        [JsonProperty(PropertyName = "activepromo")]
+        public bool PromoEnabled { get; set; }
 
     }
 }

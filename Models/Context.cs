@@ -33,6 +33,11 @@ namespace Catalogue.Models
         /// Orders Collection
         /// </summary>
         public DbSet<Order> Orders { get; set; }
+
+        /// <summary>
+        /// Promotions Collection
+        /// </summary>
+        public DbSet<Promotion> Promotions { get; set; }
     }
 
     //public class MyEntity

@@ -27,6 +27,7 @@ namespace Catalogue
 
             CosmosDbStorage<Product>.Initialize("Products");
             CosmosDbStorage<Order>.Initialize("Orders");
+            CosmosDbStorage<Promotion>.Initialize("Promotions");
         }
     }
 }

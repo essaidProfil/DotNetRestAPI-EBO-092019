@@ -13,13 +13,12 @@ namespace Catalogue.Models
     /// </summary>
     public class Order
     {
-
         /// <summary>
         /// 
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        
+
         /// <summary>
         /// Product ordered id
         /// </summary>
@@ -27,10 +26,15 @@ namespace Catalogue.Models
         public string ProductId { get; set; }
 
         /// <summary>
+        /// Unit price
+        /// </summary>
+        [JsonProperty(PropertyName = "unit_price")]
+        public float UnitPrice { get; set; }
+        /// <summary>
         /// Order Quantity
         /// </summary>
         [JsonProperty(PropertyName = "qty")]
-        public string Quantity { get; set; }
+        public int Quantity { get; set; }
 
         /// <summary>
         /// Order date
@@ -39,15 +43,45 @@ namespace Catalogue.Models
         public string DateOrder { get; set; }
 
         /// <summary>
+        /// Start promo from Promotions
+        /// </summary>
+        public string StartPromo { get; set; }
+
+        /// <summary>
+        /// End promo from Promotions
+        /// </summary>
+        public string EndPromo { get; set; }
+
+        /// <summary>
         /// Order Status : Pending, Completed, Canceled...etc
         /// </summary>
         [JsonProperty(PropertyName = "orderstatus")]
         public string Status { get; set; }
 
         /// <summary>
+        /// If is Promo from Products
+        /// </summary>
+        public bool IsPromo { get; set; }
+
+        /// <summary>
         /// Total price
         /// </summary>
-        [JsonProperty(PropertyName = "ttlprice")]
-        public double TotalPrice { get; set; }
+        /// <returns></returns>
+        /// 
+        public float TotalPrice()
+        {
+            return UnitPrice * Quantity;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual ICollection<Promotion> Promotion { get; set; }
+
+        /// <summary>
+        /// Products
+        /// </summary>
+        public virtual ICollection<Product> Product { get; set; }
+
     }
 }
