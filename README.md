@@ -30,3 +30,7 @@ Cette API permet les operations suivantes :</br>
 <b>3- Ajouter un produit au panier</b> 
 
 ![Alt text](http://ebo.itfingers.net/img/PlaceOrder.png?raw=true "Ajouter un produit au panier")
+
+<b>4- Enlever un produit du panier</b> 
+
+![Alt text](http://ebo.itfingers.net/img/RemoveOrder.png?raw=true "Enlever un produit du panier")
