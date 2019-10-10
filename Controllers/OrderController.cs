@@ -21,7 +21,7 @@ namespace Catalogue.Controllers
         /// <returns></returns>
         [HttpPost]
         [ActionName("AddOrder")]
-        public async Task<HttpResponseMessage> AddOrder([System.Web.Mvc.Bind(Include = "Id,Fname,Lname,Address,Town,Country,Email,Phone,ProductId,Quantity,DateOrder,Status,TotalPrice")] Order order)
+        public async Task<HttpResponseMessage> AddOrder([System.Web.Mvc.Bind(Include = "Id,ProductId,Quantity,DateOrder,Status,TotalPrice")] Order order)
         {
             try
             {
@@ -72,7 +72,7 @@ namespace Catalogue.Controllers
         {
             try
             {
-                var result = await CosmosDbStorage<Order>.GetItemsAsync(o => o.Id != null); ;
+                var result = await CosmosDbStorage<Order>.GetItemsAsync(o => o.Id != null);
                 return new HttpResponseMessage
                 {
                     StatusCode = HttpStatusCode.Found,

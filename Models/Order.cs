@@ -18,71 +18,8 @@ namespace Catalogue.Models
         /// 
         /// </summary>
         [JsonProperty(PropertyName = "id")]
-        public int Id { get; set; }
+        public string Id { get; set; }
         
-        /// <summary>
-        /// Champ du Prénom 
-        /// </summary>
-        [JsonProperty(PropertyName = "firstname")]
-        [Required(ErrorMessage = "Le Prénom est obligatoire !")]
-        [DisplayName("Prénom")]
-        [StringLength(160)]
-        public string Fname { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [JsonProperty(PropertyName = "lastname")]
-        [Required(ErrorMessage = "Le Nom est obligatoire !")]
-        [DisplayName("Nom")]
-        [StringLength(160)]
-        public string Lname { get; set; }
-
-        /// <summary>
-        /// Champ d'Adresse
-        /// </summary>
-        [JsonProperty(PropertyName = "adresse")]
-        [Required(ErrorMessage = "l'adresse est obligatoire !")]
-        [DisplayName("Adresse")]
-        [StringLength(70)]
-        public string Address { get; set; }
-
-        /// <summary>
-        /// Town
-        /// </summary>
-        [JsonProperty(PropertyName = "ville")]
-        [Required(ErrorMessage = "Le nom de la ville est obligatoire !")]
-        [DisplayName("Ville")]
-        [StringLength(40)]
-        public string Town { get; set; }
-
-        /// <summary>
-        /// Champ du pays
-        /// </summary>
-        [JsonProperty(PropertyName = "pays")]
-        [Required(ErrorMessage = "Le nom de votre pays est obligatoire !")]
-        [DisplayName("Votre pays")]
-        [StringLength(40)]
-        public string Country { get; set; }
-
-        /// <summary>
-        /// Email
-        /// </summary>
-        [JsonProperty(PropertyName = "courriel")]
-        [Required(ErrorMessage = "Vous devez renseigner votre adresse couriel")]
-        [DisplayName("Votre courriel")]
-        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}",
-            ErrorMessage = "L'adresse courriel est invalid.")]
-        [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }
-
-        /// <summary>
-        /// Numéro de téléphone
-        /// </summary>
-        [JsonProperty(PropertyName = "tel")]
-        [StringLength(25)]
-        public string Phone { get; set; }
-
         /// <summary>
         /// Product ordered id
         /// </summary>

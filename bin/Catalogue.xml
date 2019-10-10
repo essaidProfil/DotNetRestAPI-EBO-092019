@@ -697,41 +697,6 @@
             
             </summary>
         </member>
-        <member name="P:Catalogue.Models.Order.Fname">
-            <summary>
-            Champ du Prénom 
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Order.Lname">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Order.Address">
-            <summary>
-            Champ d'Adresse
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Order.Town">
-            <summary>
-            Town
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Order.Country">
-            <summary>
-            Champ du pays
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Order.Email">
-            <summary>
-            Email
-            </summary>
-        </member>
-        <member name="P:Catalogue.Models.Order.Phone">
-            <summary>
-            Numéro de téléphone
-            </summary>
-        </member>
         <member name="P:Catalogue.Models.Order.ProductId">
             <summary>
             Product ordered id
