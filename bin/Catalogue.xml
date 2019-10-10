@@ -742,12 +742,10 @@
             If is Promo from Products
             </summary>
         </member>
-        <member name="M:Catalogue.Models.Order.TotalPrice">
+        <member name="P:Catalogue.Models.Order.TotalPrice">
             <summary>
             Total price
             </summary>
-            <returns></returns>
-            
         </member>
         <member name="P:Catalogue.Models.Order.Promotion">
             <summary>

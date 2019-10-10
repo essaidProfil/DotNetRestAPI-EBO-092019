@@ -4,11 +4,11 @@
 <h2> RESTful API .NET Framework 4.7.2 </h2>
 
 Cette API permet les operations suivantes :</br>
-• Affichage d'une liste de produits.</br>
-• Affichage des détails d'un produit par ID,</br>
-• Ajouter un produit au panier,</br>
-• Enlever un produit du panier,</br>
-• Afficher le contenu du panier.</br>
+• Affichage d'une liste de produits: <b>Get</b> api/product</br>
+• Affichage des détails d'un produit par ID: <b>Post</b> api/product/{id}</br>
+• Ajouter un produit au panier: <b>Post</b> api/order </br>
+• Enlever un produit du panier: <b>Delete</b> api/order/{id}</br>
+• Afficher le contenu du panier: <b>Get</b> api/order</br>
 • Nous utilisons une base de données NoSql <b>AZURE CosmosDB</b> pour le stockage et la recupération des données.</br>
 
 <b>NB :</b> Vous devez indiquer les informations suivantes dans votre fichier <b>web.config</b> pour pouvoir connecter votre API à la Base AZURE CosmosDB:</br>

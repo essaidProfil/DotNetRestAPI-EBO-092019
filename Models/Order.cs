@@ -68,10 +68,17 @@ namespace Catalogue.Models
         /// </summary>
         /// <returns></returns>
         /// 
-        public float TotalPrice()
-        {
-            return UnitPrice * Quantity;
-        }
+        //public float TotalPrice()
+        //{
+        //return UnitPrice * Quantity;
+        //}
+
+        /// <summary>
+        /// Total price
+        /// </summary>
+        [JsonProperty(PropertyName = "ttlprice")]
+        public float TotalPrice { get; set; }
+
 
         /// <summary>
         /// 
