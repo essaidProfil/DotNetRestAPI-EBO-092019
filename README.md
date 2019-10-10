@@ -38,4 +38,4 @@ Cette API permet les operations suivantes :</br>
 
 <b>4- Afficher le contenu du panier</b> 
 
-![Alt text](http://ebo.itfingers.net/img/DisplayOrders.png?raw=true "Afficher le contenu du panier")
+![Alt text](http://ebo.itfingers.net/img/DisplayOrders.png?raw=true "Afficher le contenu du panier ")
