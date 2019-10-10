@@ -25,7 +25,7 @@ Cette API permet les operations suivantes :</br>
 
 <b>2- Affichage des détails d'un produit par ID</b> 
 
-![Alt text](http://ebo.itfingers.net/img/ProductById.png?raw=true "Affichage du produit par Id")
+![Alt text](http://ebo.itfingers.net/img/ProductByIdx.png?raw=true "Affichage du produit par Id")
 
 <b>3- Ajouter un produit au panier</b> 
 
