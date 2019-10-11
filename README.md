@@ -15,7 +15,10 @@ Cette API permet les operations suivantes :</br>
     < add key="endpoint" value="https://VOTRE-AZURE-HOST.documents.azure.com:443/" /></br>
     < add key="authKey" value="VOTRE-AZURE-AUTHKEY==" /></br>
     < add key="database" value="NOM-DE-VOTRE-DB" /></br>
-    
+ 
+ <b><em>NB : Concernant le Projet Catalogue.Tests il doit étre placer au même niveau que le dossier de la solution , comme mentionné dans l'image suivante:</em></b></br>
+ ![Alt text](http://ebo.itfingers.net/img/Project&TestProject.png?raw=true "Dossier du projet Tests")
+
 # Captures d'écran des résultats sur Postman:
 
 <b>1- Affichage d'une liste de produits</b> 
